@@ -8,8 +8,8 @@ const Drawer = createDrawerNavigator();
 export default function HomeDrawerNavigator() {
     return (
         <Drawer.Navigator initialRouteName="Home" screenOptions={{ headerShown: true }}>
-            <Drawer.Screen name="Home2" component={HomeScreen} />
-            <Drawer.Screen name="Play2" component={PlayScreen}/>
+            <Drawer.Screen name="Home" component={HomeScreen} />
+            <Drawer.Screen name="Play" component={PlayScreen} />
         </Drawer.Navigator>
     );
 }

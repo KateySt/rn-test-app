@@ -5,28 +5,22 @@
  * @format
  */
 
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+import {StatusBar, useColorScheme} from 'react-native';
 import {NavigationContainer} from "@react-navigation/native";
 import MainNavigator from "./src/navigation/MainNavigator.tsx";
-
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+    const isDarkMode = useColorScheme() === 'dark';
 
-  return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <NavigationContainer>
-            <MainNavigator />
-        </NavigationContainer>
-    </View>
-  );
+    return (
+        <SafeAreaProvider>
+            <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'}/>
+            <NavigationContainer>
+                <MainNavigator/>
+            </NavigationContainer>
+        </SafeAreaProvider>
+    );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;
