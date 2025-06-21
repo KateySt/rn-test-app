@@ -1,4 +1,4 @@
-package com.myrnproject
+package dev.expo.project
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

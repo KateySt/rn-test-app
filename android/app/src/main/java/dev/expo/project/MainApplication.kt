@@ -1,4 +1,4 @@
-package com.myrnproject
+package dev.expo.project
 
 import android.app.Application
 import com.facebook.react.PackageList
