@@ -3,6 +3,8 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeScreen from '../screens/HomeScreen';
 import PlayScreen from '../screens/PlayScreen.tsx';
 import WebRTCBluetoothScreen from '../screens/WebRTCBluetoothScreen.tsx';
+import NfcScreen from '../screens/NfcScreen.tsx';
+import OcrScreen from '../screens/OcrScreen.tsx';
 
 const Drawer = createDrawerNavigator();
 
@@ -18,6 +20,8 @@ export default function HomeDrawerNavigator() {
         name="WebRTCBluetoothScreen"
         component={WebRTCBluetoothScreen}
       />
+      <Drawer.Screen name="Nfc" component={NfcScreen} />
+      <Drawer.Screen name="OcrScreen" component={OcrScreen} />
     </Drawer.Navigator>
   );
 }
