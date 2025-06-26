@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Alert,
-  Button, Linking,
+  Button,
   PermissionsAndroid,
   Platform,
   StyleSheet,
@@ -11,7 +11,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { launchCamera } from 'react-native-image-picker';
 import CameraRoll from '@react-native-camera-roll/camera-roll';
 
-export default function PhotoScreen() {
+export default function MediaGalleryScreen() {
   const requestPermissions = async () => {
     try {
       const camera = await PermissionsAndroid.request(

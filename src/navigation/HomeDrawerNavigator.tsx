@@ -1,10 +1,14 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import HomeScreen from '../screens/HomeScreen';
-import PlayScreen from '../screens/PlayScreen.tsx';
-import WebRTCBluetoothScreen from '../screens/WebRTCBluetoothScreen.tsx';
-import NfcScreen from '../screens/NfcScreen.tsx';
-import OcrScreen from '../screens/OcrScreen.tsx';
+import BluetoothScreen from '../screens/BluetoothScreen.tsx';
+import NFCScreen from '../screens/NFCScreen.tsx';
+import OCRScreen from '../screens/OCRScreen.tsx';
+import MediaGalleryScreen from '../screens/MediaGalleryScreen.tsx';
+import ContactsScreen from '../screens/ContactsScreen.tsx';
+import AudioNotesScreen from '../screens/AudioNotesScreen.tsx';
+import MapScreen from '../screens/MapScreen.tsx';
+import WebRTCScreen from '../screens/WebRTCScreen.tsx';
 
 const Drawer = createDrawerNavigator();
 
@@ -15,13 +19,14 @@ export default function HomeDrawerNavigator() {
       screenOptions={{ headerShown: true }}
     >
       <Drawer.Screen name="Home" component={HomeScreen} />
-      <Drawer.Screen name="Play" component={PlayScreen} />
-      <Drawer.Screen
-        name="WebRTCBluetoothScreen"
-        component={WebRTCBluetoothScreen}
-      />
-      <Drawer.Screen name="Nfc" component={NfcScreen} />
-      <Drawer.Screen name="OcrScreen" component={OcrScreen} />
+      <Drawer.Screen name="NFC" component={NFCScreen} />
+      <Drawer.Screen name="Bluetooth" component={BluetoothScreen} />
+      <Drawer.Screen name="OCR" component={OCRScreen} />
+      <Drawer.Screen name="Audio Notes" component={AudioNotesScreen} />
+      <Drawer.Screen name="Gallery" component={MediaGalleryScreen} />
+      <Drawer.Screen name="Contacts" component={ContactsScreen} />
+      <Drawer.Screen name="Map" component={MapScreen} />
+      <Drawer.Screen name="WebRTCScreen" component={WebRTCScreen} />
     </Drawer.Navigator>
   );
 }
